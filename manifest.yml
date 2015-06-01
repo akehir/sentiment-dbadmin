@@ -1,0 +1,14 @@
+---
+applications:
+- name: SentiDBAdmin
+  memory: 256M
+  instances: 1
+  command: node --expose-gc app.js
+  host: asenti-dbadmin
+  domain: mybluemix.net
+  path: .
+  services: 
+   - sentiment-mongodb
+   - sentiment-mq
+   - sentiment-autoscaling
+   - sentiment-monitoring
